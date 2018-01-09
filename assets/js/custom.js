@@ -1,4 +1,4 @@
-
+(function(){
 /*
 *******************************************************************************
 =							Contact Form
@@ -6,6 +6,7 @@
 */
 
     $("#contact").submit(function (e) {
+        console.log(e)
         e.preventDefault();
         var name = $("#name").val();
         var email = $("#email").val();
