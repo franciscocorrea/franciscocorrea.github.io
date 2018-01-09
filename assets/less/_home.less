@@ -1,0 +1,110 @@
+.parallax-mirror{
+  background: @black;
+}
+.parallax-mirror .parallax-slider {
+  opacity: 0.3;
+}
+.home-banner {
+  position: relative;
+  &:after{
+    content: "";
+    background: none;
+    z-index: 9;
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid rgba(255,255,255,0.4);
+  }
+}
+.home-banner .welcome-text {
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  z-index:10;
+  display: block;
+  top: 50%;
+  left: 0;
+  transform: translate(0,-50%);
+  h3{
+    margin: 0;
+    padding: 0;
+    font-size: 55px;
+    color: @white;
+    font-weight: 300;
+  }
+
+  h2{
+    margin: 0;
+    padding: 20px 0 20px;
+    font-size: 90px;
+    color: @white;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 80px;
+    text-shadow: rgba(0, 0, 0, 0.6) 2px 2px 3px;
+  }
+
+  .icon-btn{
+    margin-top: 20px;
+    font-size: 25px;
+    color: @white;
+    position: absolute;
+    display: inline-block;
+
+    i.fa{
+      position: absolute;
+      left: -10px;
+      animation: MoveUpDown 1s linear infinite;
+    }
+  }
+}
+
+@keyframes MoveUpDown {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@media (max-width: 767px){
+  .home-banner:after{
+    display: none;
+  }
+  .home-banner:before{
+    content:"";
+    position: absolute;
+    z-index:1;
+    display: block;
+    width: 100%;
+    height:100%;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,0.6);
+  }
+  .home-banner .welcome-text h3{
+    font-size: 28px;
+  }
+  .home-banner .welcome-text h2 {
+    padding: 10px 0 15px;
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .home-banner .welcome-text p{
+    padding: 0 0 15px;
+    font-size: 14px;
+  }
+  .home-banner .welcome-text .m-btn{
+    line-height: 40px;
+    padding: 0 25px;
+    font-size: 13px;
+  }
+}

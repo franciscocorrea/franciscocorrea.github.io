@@ -1,0 +1,43 @@
+.service{
+  padding: 20px;
+  background: @white;
+  text-align: center;
+  box-shadow: 0px 6px 16px 0 rgba(0,0,0,.15);
+  margin-bottom:20px;
+
+  .service-icon {
+    display: inline-block;
+    backface-visibility: hidden;
+    width: 60px;
+    height:60px;
+    text-align: center;
+    line-height:60px;
+    border: 1px solid @black;
+    background: @black;
+    color: @white;
+    transform: rotate(45deg);
+    margin: 20px 0px;
+    transition: ease 0.2s;
+    i{
+      transform: rotate(-45deg);
+      vertical-align: -4px;
+    }
+  }
+
+  &:hover {
+    .service-icon {
+      background: @white;
+      color: @black;
+    }
+  }
+
+  .service-desc {
+    p{
+      margin-bottom: 12px;
+    }
+
+    .m-btn{
+      margin-top: 5px;
+    }
+  }
+}

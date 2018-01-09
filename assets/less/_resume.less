@@ -1,0 +1,125 @@
+
+.resume-box {
+  padding: 20px;
+  box-shadow: 0px 6px 16px 0 rgba(0,0,0,.15);
+  >h4 {
+    font-size:20px;
+    margin: 0;
+  }
+}
+
+
+
+.timeline {
+  margin-top: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.timeline:before {
+  content: "\A";
+  display: block;
+  opacity: 1;
+  width: 1px;
+  height: 83%;
+  position: absolute;
+  bottom: 35px;
+  left: 5px;
+  background: #395160;
+  -webkit-transition: all 2s ease-out;
+  -moz-transition: all 2s ease-out;
+  -ms-transition: all 2s ease-out;
+  -o-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+}
+
+.timeline .entry {
+  font-size: 13px;
+  font-weight: 400;
+  color: #8a8a8a;
+  margin-bottom: 6px;
+}
+
+.timeline .entry .content span {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #2c2c2c;
+}
+
+.timeline .entry .time{
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: @black-text;
+  margin-bottom: 50px;
+  &.last {
+    margin-bottom: 30px;
+  }
+}
+
+.timeline .entry:last-of-type {
+  margin-bottom: 0px;
+}
+
+.timeline .entry:before,
+.timeline .entry:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.timeline .entry:after {
+  clear: both;
+}
+
+.timeline .entry .strong {
+  display: block;
+  color: #212121;
+}
+
+.timeline .entry .time, .timeline .entry .content {
+  float: left;
+  width: 100%;
+}
+
+.timeline .entry .time {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline .entry .content {
+  padding-top: 0px;
+  padding-left: 50px;
+  font-size: 15px;
+}
+
+.timeline .entry .time:before {
+  content: "\A";
+  display: block;
+  position: absolute;
+  top: 6px;
+  left: 0px;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border: 2px solid @black;
+
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+}
+
+.timeline .entry .time.on:before {
+  border: 2px solid @black;
+
+}
+
+.timeline .entry .time, .timeline .entry .content {
+  width: 50%;
+}
+
+@media (max-width: 768px){
+  .timeline:before {
+    height: 100%;
+  }
+}

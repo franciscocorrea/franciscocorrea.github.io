@@ -1,0 +1,115 @@
+
+// variables
+
+@white : #fff;
+@black : #000;
+@black-text: #222;
+@raleway : 'Raleway', sans-serif;
+
+
+
+html,body {
+  font-family: @raleway;
+  color: @black-text;
+}
+
+img {
+  max-width: 100%;
+}
+a:focus,
+button:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+p {
+  letter-spacing: 0.4px;
+  font-size: 15px;
+}
+
+.m-btn {
+  display: inline-block;
+  background: rgba(255,255,255,0.7);
+  color: @black;
+  border: 1px solid @black;
+  font-size: 14px;
+  border-radius: 0;
+  padding: 4px 12px;
+  transition: all .2s ease;
+  letter-spacing: 0.3px;
+  margin-bottom:5px;
+  &:hover, &:focus, &.mixitup-control-active {
+    background: @black;
+    color: @white;
+    text-decoration: none;
+  }
+
+  &.contact-me{
+    margin-right:3px;
+  }
+}
+
+
+#loading{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: @white;
+  z-index: 9999;
+
+  .ripple{
+    display: block;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.animate{
+  opacity:0;
+  transform: translateY(35px);
+  transition: ease 0.3s;
+  &.second{
+    transition: ease 0.6s;
+  }
+
+  &.third {
+    transition: ease 0.9s;
+  }
+  &.fadeIn{
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  padding: 0px 0px 100px 0px;
+  .section-title{
+    text-align: center;
+    padding: 100px 0px 50px;
+    h2{
+      font-weight: 300;
+      text-transform: uppercase;
+      line-height: 35px;
+      font-size: 35px;
+      position: relative;
+      margin: 0;
+      span{
+        font-weight:600;
+      }
+    }
+
+    p{
+      margin:15px 0px 0px;
+      font-size: 15px;
+      color: #777;
+    }
+  }
+
+  &.grey-bg{
+    background: #f3f3f3;
+  }
+}
